@@ -1,15 +1,16 @@
 package tpe;
 
-import java.util.Enumeration;
 import java.util.Vector;
 
-public class Coleccion {
+public class Coleccion  {
 	
 	private Vector <Pista> pistas;
-
+	private Vector <Elemento> playlists;
+	
 	public Coleccion() {
 		super();
 		this.pistas = new Vector <Pista>();
+		this.playlists = new Vector <Elemento>();
 	}
 	
 	public void addPista (Pista p){
@@ -18,14 +19,15 @@ public class Coleccion {
 		pistas.add(p);
 	}
 	
-	public int getTime(){
-		int res=0;
+	
+	public int getTimeColeccion(){
+		int suma=0;
 		Pista aux;
-		for (Enumeration e=pistas.elements();e.hasMoreElements();){
-			aux= (Pista)e.nextElement();
-			res+=aux.getDuracion();
+		for (int i=0;i<pistas.size();i++){
+			aux= (Pista)pistas.elementAt(i);
+			suma+=aux.getDuracion();
 		}
-		return res;
+		return suma;
 	}
 	
 	

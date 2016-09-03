@@ -1,37 +1,36 @@
 package tpe;
 
-import java.util.Enumeration;
 import java.util.Vector;
 
 public class Playlist extends Elemento {
 	
 	
-	
-	Vector <Integer> pistas;
+	String nombre;
+	Vector <Elemento> elementos;
 	
 	
 	
 	public Playlist() {
 		super();
-		pistas = new Vector<Integer>();
+		elementos = new Vector<Elemento>();
 	}
 
-	public Playlist(Vector<Integer> pistas) {
+	public Playlist(Vector<Elemento> elementos, String nombre) {
 		super();
-		this.pistas = pistas;
+		this.elementos = elementos;
+		this.nombre= nombre;
 	}
 	
-	public void addPista(int i){
-		pistas.add(i);
-	}
-	
-	public void imprimirLista(){
-		int aux;
-		for (Enumeration e=pistas.elements();e.hasMoreElements();){
-			aux= (Integer) e.nextElement();
-			System.out.println(aux);
+	public int getTime(){
+		int suma=0;
+		for (int i=0;i<elementos.size();i++){
+			Elemento ei= (Elemento) elementos.elementAt(i);
+			suma = suma + ei.getTime();
 		}
+		return suma;
 	}
+	
+
 	
 
 }
