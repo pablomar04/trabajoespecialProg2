@@ -30,6 +30,12 @@ public class Playlist extends Elemento {
 		return suma;
 	}
 	
+	public void addElemento (Elemento e){
+		
+		elementos.addElement(e);
+		
+	}
+	
 
 	
 

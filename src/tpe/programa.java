@@ -3,6 +3,7 @@ package tpe;
 public class programa {
 
 	public static void main(String[] args) {
+		
 		Pista p1 = new Pista(1,"El tiempo no para",311,"Bersuit Vergarabat","De la cabeza",2002,"Rock Nacional","");
 		Pista p2 = new Pista(2,"Mi caramelo",311,"Bersuit Vergarabat","De la cabeza",2002,"Rock Nacional","");
 		Pista p3 = new Pista(3,"Party rock anthem",408,"LMFAO","Sorry for Party Rocking",2011,"Electro pop","");
@@ -29,14 +30,34 @@ public class programa {
 		c1.addPista(p10);
 		c1.addPista(p11);
 		c1.addPista(p12);
-		System.out.println(c1.getTime());
+		System.out.println(c1.getTimeColeccion());
 		
 		Playlist lomejor = new Playlist();
-		lomejor.addPista(3);
-		lomejor.addPista(4);
-		lomejor.addPista(7);
-		lomejor.addPista(12);
-		lomejor.imprimirLista();
+		Elemento e1= new ElementoLista(3,408);
+		Elemento e2= new ElementoLista(4,421);
+		Elemento e3= new ElementoLista(7,320);
+		Elemento e4= new ElementoLista(12,311);
+		
+		lomejor.addElemento(e1);
+		lomejor.addElemento(e2);
+		lomejor.addElemento(e3);
+		lomejor.addElemento(e4);
+		
+		
+		
+		System.out.println(lomejor.getTime());
+		
+		Playlist lomejorymas = new Playlist();
+		Elemento e5= new ElementoLista(1,311);
+		lomejorymas.addElemento(e5);
+		lomejorymas.addElemento(lomejor);
+		
+		System.out.println(lomejorymas.getTime());
+	/*	lomejor.addElemento(3);
+		lomejor.addElemento(4);
+		lomejor.addElemento(7);
+		lomejor.addElemento(12);
+		//lomejor.imprimirLista();*/
 		
 
 	}
