@@ -30,6 +30,14 @@ public class programa {
 		c1.addPista(p11);
 		c1.addPista(p12);
 		System.out.println(c1.getTime());
+		
+		Playlist lomejor = new Playlist();
+		lomejor.addPista(3);
+		lomejor.addPista(4);
+		lomejor.addPista(7);
+		lomejor.addPista(12);
+		lomejor.imprimirLista();
+		
 
 	}
 
