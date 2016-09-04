@@ -12,6 +12,7 @@ public class Playlist extends Elemento {
 	
 	public Playlist() {
 		super();
+		nombre="Lista sin nombre";
 		elementos = new Vector<Elemento>();
 	}
 
@@ -35,6 +36,17 @@ public class Playlist extends Elemento {
 		elementos.addElement(e);
 		
 	}
+	
+
+
+	@Override
+	public void eliminarElemento(int id) {
+		for (int i=0;i<this.elementos.size();i++){
+			this.elementos.elementAt(i).eliminarElemento(id);
+		}
+		
+	}
+	
 	
 
 	

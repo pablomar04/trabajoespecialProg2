@@ -19,6 +19,20 @@ public class Coleccion  {
 		pistas.add(p);
 	}
 	
+	public void delPista (int id){
+		
+		if (id<pistas.size()){
+			
+			pistas.remove(id);
+			for (int i=0; i<playlists.size();i++){
+				playlists.elementAt(i).eliminarElemento(id);
+				
+			}
+		}
+		
+	}
+	
+	
 	
 	public int getTimeColeccion(){
 		int suma=0;

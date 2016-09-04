@@ -30,6 +30,7 @@ public class programa {
 		c1.addPista(p10);
 		c1.addPista(p11);
 		c1.addPista(p12);
+		
 		System.out.println(c1.getTimeColeccion());
 		
 		Playlist lomejor = new Playlist();
@@ -53,6 +54,10 @@ public class programa {
 		lomejorymas.addElemento(lomejor);
 		
 		System.out.println(lomejorymas.getTime());
+		
+		c1.delPista(1);
+		System.out.println(lomejorymas.getTime());
+
 	/*	lomejor.addElemento(3);
 		lomejor.addElemento(4);
 		lomejor.addElemento(7);
