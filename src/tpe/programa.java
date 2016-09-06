@@ -18,6 +18,7 @@ public class programa {
 		Pista p12 = new Pista(12,"Yo Canibal",311,"Patricio rey y sus redonditos de ricota","Lobo Suelto, Cordero atado",1993,"Rock Nacional","");
 		
 		Coleccion c1 = new Coleccion();
+		
 		c1.addPista(p1);
 		c1.addPista(p2);
 		c1.addPista(p3);
@@ -31,13 +32,14 @@ public class programa {
 		c1.addPista(p11);
 		c1.addPista(p12);
 		
-		System.out.println(c1.getTimeColeccion());
+		System.out.println("Tamaño de la coleccion: "+c1.getTimeColeccion());
 		
 		Playlist lomejor = new Playlist();
 		Elemento e1= new ElementoLista(3,408);
 		Elemento e2= new ElementoLista(4,421);
 		Elemento e3= new ElementoLista(7,320);
 		Elemento e4= new ElementoLista(12,311);
+		Elemento e5= new ElementoLista(11,438);
 		
 		lomejor.addElemento(e1);
 		lomejor.addElemento(e2);
@@ -46,9 +48,15 @@ public class programa {
 		
 		
 		
-		System.out.println(lomejor.getTime());
+		System.out.println("Tamaño playlist 'Lo mejor': "+lomejor.getTime());
 		
-		Playlist lomejorymas = new Playlist();
+		lomejor.addElemento(e5);
+		
+		System.out.println("Tamaño playlist 'Lo mejor': "+lomejor.getTime());
+		lomejor.eliminarElemento(11);
+		lomejor.eliminarElemento(4);
+		System.out.println("Tamaño playlist 'Lo mejor': "+lomejor.getTime());
+		/*	Playlist lomejorymas = new Playlist();
 		Elemento e5= new ElementoLista(1,311);
 		lomejorymas.addElemento(e5);
 		lomejorymas.addElemento(lomejor);
@@ -58,7 +66,7 @@ public class programa {
 		c1.delPista(1);
 		System.out.println(lomejorymas.getTime());
 
-	/*	lomejor.addElemento(3);
+	lomejor.addElemento(3);
 		lomejor.addElemento(4);
 		lomejor.addElemento(7);
 		lomejor.addElemento(12);

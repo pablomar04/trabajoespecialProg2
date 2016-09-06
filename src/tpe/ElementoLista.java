@@ -15,19 +15,6 @@ public class ElementoLista extends Elemento{
 	public int getTime() {
 		
 		return duracion;
-	}
-	
-	public void eliminarElemento(int id){
-		
-		if (id==this.ID){
-			try {
-				this.finalize();
-			} catch (Throwable e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-	}
-	
+	}	
 
 }

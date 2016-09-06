@@ -39,10 +39,18 @@ public class Playlist extends Elemento {
 	
 
 
-	@Override
+	
 	public void eliminarElemento(int id) {
 		for (int i=0;i<this.elementos.size();i++){
-			this.elementos.elementAt(i).eliminarElemento(id);
+			if(this.elementos.elementAt(i) instanceof ElementoLista){
+				ElementoLista aux = (ElementoLista)this.elementos.elementAt(i);
+				if (aux.ID==id){
+					this.elementos.removeElementAt(i);
+				}
+			}else{
+			
+				this.elementos.elementAt(i).eliminarElemento(id);
+			}
 		}
 		
 	}
