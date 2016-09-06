@@ -56,6 +56,8 @@ public class programa {
 		lomejor.eliminarElemento(11);
 		lomejor.eliminarElemento(4);
 		System.out.println("Tamaño playlist 'Lo mejor': "+lomejor.getTime());
+		c1.delPista(4);//Esto esta borrando la posicion 4 del vector "CORREGIR"
+		System.out.println("Tamaño de la coleccion: "+c1.getTimeColeccion());
 		/*	Playlist lomejorymas = new Playlist();
 		Elemento e5= new ElementoLista(1,311);
 		lomejorymas.addElemento(e5);
