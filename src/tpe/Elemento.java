@@ -10,4 +10,8 @@ public abstract class Elemento {
 		
 	}
 
+	public abstract int contarElementos() ;
+		// TODO Auto-generated method stub
+
+
 }

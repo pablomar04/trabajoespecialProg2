@@ -32,7 +32,13 @@ public class Coleccion  {
 		
 	}
 	
-	
+	public int cantidadElementos(){
+		int suma=0;
+		for (int i=0;i<pistas.size();i++){
+			suma++;
+		}
+		return suma;
+	}
 	
 	public int getTimeColeccion(){
 		int suma=0;
@@ -43,8 +49,5 @@ public class Coleccion  {
 		}
 		return suma;
 	}
-	
-	
-	
 
 }

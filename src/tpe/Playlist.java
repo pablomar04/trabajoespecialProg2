@@ -21,24 +21,14 @@ public class Playlist extends Elemento {
 		this.elementos = elementos;
 		this.nombre= nombre;
 	}
-	
-	public int getTime(){
-		int suma=0;
-		for (int i=0;i<elementos.size();i++){
-			Elemento ei= (Elemento) elementos.elementAt(i);
-			suma = suma + ei.getTime();
-		}
-		return suma;
-	}
+
+
 	
 	public void addElemento (Elemento e){
 		
 		elementos.addElement(e);
 		
 	}
-	
-
-
 	
 	public void eliminarElemento(int id) {
 		for (int i=0;i<this.elementos.size();i++){
@@ -55,8 +45,37 @@ public class Playlist extends Elemento {
 		
 	}
 	
+	public int getTime(){
+		int suma=0;
+		for (int i=0;i<elementos.size();i++){
+			Elemento ei= (Elemento) elementos.elementAt(i);
+			suma = suma + ei.getTime();
+		}
+		return suma;
+	}
 	
+	public int contarElementos(){
+		int suma=0;
+		for (int i=0;i<elementos.size();i++){
+			Elemento ei= (Elemento) elementos.elementAt(i);
+			suma = suma + ei.contarElementos();
+		}
+		return suma;
+	}
 
-	
+	/*public int contarElementos() {
+		int suma=0;
+		for (int i=0;i<this.elementos.size();i++){
+			
+			if(this.elementos.elementAt(i) instanceof ElementoLista){
+				suma++;
+			}else{
+			
+				suma+=this.elementos.elementAt(i).contarElementos();
+			}
+		}
+		
+	}*/
+
 
 }

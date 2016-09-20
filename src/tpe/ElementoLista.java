@@ -15,6 +15,12 @@ public class ElementoLista extends Elemento{
 	public int getTime() {
 		
 		return duracion;
+	}
+
+	@Override
+	public int contarElementos() {
+		// TODO Auto-generated method stub
+		return 1;
 	}	
 
 }

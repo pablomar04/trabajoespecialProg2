@@ -39,7 +39,7 @@ public class programa {
 		Elemento e2= new ElementoLista(4,421);
 		Elemento e3= new ElementoLista(7,320);
 		Elemento e4= new ElementoLista(12,311);
-		Elemento e5= new ElementoLista(11,438);
+		//Elemento e5= new ElementoLista(11,438);
 		
 		lomejor.addElemento(e1);
 		lomejor.addElemento(e2);
@@ -49,31 +49,20 @@ public class programa {
 		
 		
 		System.out.println("Tamaño playlist 'Lo mejor': "+lomejor.getTime());
+		System.out.println("Tamaño playlist 'Lo mejor': "+lomejor.contarElementos());
 		
-		lomejor.addElemento(e5);
+		Playlist lopeor = new Playlist();
+		lopeor.addElemento(e1);
+		lopeor.addElemento(e2);
+		lopeor.addElemento(e3);
+		
+		lomejor.addElemento(lopeor);
 		
 		System.out.println("Tamaño playlist 'Lo mejor': "+lomejor.getTime());
-		lomejor.eliminarElemento(11);
-		lomejor.eliminarElemento(4);
-		System.out.println("Tamaño playlist 'Lo mejor': "+lomejor.getTime());
-		c1.delPista(4);//Esto esta borrando la posicion 4 del vector "CORREGIR"
-		System.out.println("Tamaño de la coleccion: "+c1.getTimeColeccion());
-		/*	Playlist lomejorymas = new Playlist();
-		Elemento e5= new ElementoLista(1,311);
-		lomejorymas.addElemento(e5);
-		lomejorymas.addElemento(lomejor);
+		System.out.println("Tamaño playlist 'Lo mejor': "+lomejor.contarElementos());
 		
-		System.out.println(lomejorymas.getTime());
 		
-		c1.delPista(1);
-		System.out.println(lomejorymas.getTime());
 
-	lomejor.addElemento(3);
-		lomejor.addElemento(4);
-		lomejor.addElemento(7);
-		lomejor.addElemento(12);
-		//lomejor.imprimirLista();*/
-		
 
 	}
 
