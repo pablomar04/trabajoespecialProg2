@@ -5,8 +5,8 @@ import java.util.Vector;
 public class Playlist extends ElementoMusical {
 	
 	
-	String nombre;
-	Vector <ElementoMusical> elementos;
+	private String nombre;
+	private Vector <ElementoMusical> elementos;
 	
 	
 	
