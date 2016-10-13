@@ -2,21 +2,21 @@ package tpe;
 
 import java.util.Vector;
 
-public class Playlist extends Elemento {
+public class Playlist extends ElementoMusical {
 	
 	
 	String nombre;
-	Vector <Elemento> elementos;
+	Vector <ElementoMusical> elementos;
 	
 	
 	
 	public Playlist() {
 		super();
 		nombre="Lista sin nombre";
-		elementos = new Vector<Elemento>();
+		elementos = new Vector<ElementoMusical>();
 	}
 
-	public Playlist(Vector<Elemento> elementos, String nombre) {
+	public Playlist(Vector<ElementoMusical> elementos, String nombre) {
 		super();
 		this.elementos = elementos;
 		this.nombre= nombre;
@@ -24,26 +24,13 @@ public class Playlist extends Elemento {
 
 
 	
-	public void addElemento (Elemento e){
+	public void addElemento (ElementoMusical e){
 		
 		elementos.addElement(e);
 		
 	}
 	
-	public void eliminarElemento(int id) {
-		for (int i=0;i<this.elementos.size();i++){
-			if(this.elementos.elementAt(i) instanceof ElementoLista){
-				ElementoLista aux = (ElementoLista)this.elementos.elementAt(i);
-				if (aux.ID==id){
-					this.elementos.removeElementAt(i);
-				}
-			}else{
-			
-				this.elementos.elementAt(i).eliminarElemento(id);
-			}
-		}
-		
-	}
+
 	
 	public int getTime(){
 		int suma=0;

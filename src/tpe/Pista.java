@@ -1,6 +1,6 @@
 package tpe;
 
-public class Pista {
+public class Pista extends ElementoMusical {
 	
 	private int ID;
 	private String titulo;
@@ -86,6 +86,17 @@ public class Pista {
 
 	public void setComentarios(String comentarios) {
 		this.comentarios = comentarios;
+	}
+	
+	public int getTime (){
+		
+		return duracion;
+	}
+
+	
+	public int contarElementos() {
+		
+		return 1;
 	}
 	
 	
